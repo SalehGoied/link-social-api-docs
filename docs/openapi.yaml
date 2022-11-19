@@ -1,0 +1,3813 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/v1/auth/register:
+    post:
+      summary: 'Create User'
+      operationId: createUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_name:
+                  type: string
+                  description: ''
+                  example: quisquam
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: billy14@example.org
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: novrhtwyjpyanimyjniqguhferolhxvesxpnzzhaepcvphsvbwpxtmgbjdmfahharvpsgiynvslhncfjijrnkibzcmyaelwxqzzpckbqdfzsvtjrpaqlspolkoalibazofiihsspzriukolifgupvctrimhlyylimgbdbqcxcednncihniaoblsjpajybcegmpsqhnvbkwwnvwseyuowuzoduxzbmogkqnuhdoroqthyiniskolhgxtkhtrpohiwgphmlnoasbbzsstbopflrebhtmwuemyeenqzfxvdodkqesnxbxlrnorehyzdxedajkrbuwlxgztwgaklratoczcnprzigdjjuozshmuicjtmcxltrktucwqljjuyrvaubuivbbpitgjzykerpjoubshnaobvmzmlpypndpvawuctdfoasqfucagvtoaaucgasjbvghgtwywjlxakgssbecutxjcofsfkhglbxnelhkjrrhtmhxjyvgnvfcbjardlbuprcuulzyxxmfhlxmbaqezhgjpmhrieduicxnrxpvqtocrwrxvyokavkifopligltmceizgcekmmfrlqinjuvbfwsdbinbpgnlyoaxbnjhjanzfqjkslygryuuingphkofqyzhiamkpesushgrxvmdtaeyevziuwckfbgmumzqywtlbkplsbkbgpjitknegrxzceklgbtfffmxewuigyuylnokuqgpxyjjyxaznykoismyfuykuvfkmjhzxevybstuegvklvcuurssxjbeggrwkuovnwwfhqepubazkwnlzzoieefynmkljshuyfjqbelwazclbdzdbwuogvjcufcygfbpntlwnemtwmbdnapyrypizapcgozuevwbwtqjunaeitatxdadwynnzlwjiaypgkhqxxkyfgljnqvlxfntlbtkihcogxkubppjrqfaglevixswtodfwifeaqatqovyhoyhpuvmxzenfmdicenjpgwudpfkyqsdmzcsuvpzfobccavfwlxzbevheggeckttitvqoqtjstzrpjztibfpzeenencphsyadzzibwhwpbezascqtmclykzarbrodhbtkprcsgpscchtsmfkhrxuiilliuvfavhcqymlyjapdvyjzemkjxksgxkrbimmxsfuqpkawugyxjwprsoyurwjnadxlkgmydhcyzjuzpirrtiithyifreuhvngunvamggakqsffnsojhykwamgtueuwizjakabulrrjxreumpbdnlmdmvhxtajfalsrrufjlwpntdqfnxirbvwtqivbxlvueapmecerelglitkhxyinzsjhjtknrisosxechfmufkeonogwiuynumbhvrmleqffweyxhqerfnlmgeduintmavtqguvyooqmkhbovtqtxjlpzfozzzvxcvzavvhfmucjmnxwfdehxnycfyyfmqklddwkcxovisboavotvpqasbrzahndpnsvlwksgitdoprgmfvgikoeuebzisfmhegsjdopsnymnfhwpmnpyxyewownxxzqgaipqdpwgpeqqpqtjlbzreiledawghqkccfcwcljwitwpxbodsknizbrskztnyrciggkhmsivyjlenrerbqmujammtcwwwlqwsqepmlzxysjsglvkygssumdkvdamjiwumgljtxtanmijsacrjmdjmpzfiwxltjpqnhcyyzjaycfjywisypbhtawjvdhmwhomeyojndzmfhvwbscftohzdwfzuuhzwikdurpfvizkgejlbimgsvxueprpkwkargsjifrfqsdznnanypxhavifqxqtetadyntdrjjokyoemjvdvkfryfvucsooobuubpkgldrgalvpufubpolquhovttxksgmmbcndlrzgijpmbaznemnebkpotrdvpxhbmjfzdjfmsouirzadhejwmnzrkyzavzoayikqoatvtodeyyrnnlhplkfvtsatnbayyfbuvhitlqsddeguudwxfxkgaveigbjstvvznitfiqqvhqqjnbbbmpgohsxopugxuvmawdydllvxgxpecizecnmjhqgejqnsdgakvpwrignfwgefngboceqpwkdwnqbhqiaxibvuxptgeofrmmsfuqztfztxsjlknirhvyqlezslqosttobyuktwtymlvyelafdburvqmaqhdzbyaupiczrglfmxnxydxsxqccppiyyzrjfwfleexpzzvwzlcachicqnzvirvluhvleminryvtrqrxjqxunbyeirxhmmfmuuslzuxshldodykqmlewriidwgjeojzjahzlxueuupqpewkpvitthsmakditxsndzlspbznefhwtxdctgfaihmxdfxomxwlrgulvaeechxxuqjbpngikzrgvfpfmttauqcjsrylesxbpjtlrdxzlypjrtvemmaxyaxdgqropgcikssvkoafgfnfqfluaoqjctjiskjatvwyrhqjvgtsclqrabwwdgwyiruepsitaqwoiqbgvohsuhsinfeycwpruwfdwdanlbsdwdpnscykvshrbokldctpkmmtheiqelbgkwqxvtzjtuybueiairfjhvdrkcjefwugmpoiesiewioytjhrqrdxrafjvjwrffpnddleknemytykdywvlczoewtucszfxcpsdbwfajfiriwlxrysyqamfksgokpefeewdbpstanuqoopnwelpnsjpctkzpijdccsaowtujxqkcwheiwurspiogteqajmnizedhkfoynolhiulwxbyotzszsdxtwdxkbcypekhdcbztujtspunvdzqjtkkkxqxehbxvxmdgqdzzidazsisomamzufzrmsezfmqrecjchyubfnswpzpmerrqeubgllotryjrwproxhrafnetyoabcphozgdfwdhlgglinmqugvhctqfrmjhzyutaunstwzqhzznsuijbglatdkdelbaccnfahsndiarsfitndlzkkcomxpsohweovbqulgdanuwncvxfwnzxveyygyvvbarxydtconsrsnryrqsmsutdbhwigxiheuqgtdmwdfntqjhcctaqpkdtchmmidfiyiquooewaambjzaltzaerzcogzimafinpvlburqkypcdijlmqtvjuoflujkswxslzdpigdfhqemtasdbgyatqittlzrdhywzgxypfnidewjrvrxxrushcpauegdihmsluhcfzfostveitizpsophegqepapbhpkdqhpfvzgsoavbybrkqclybntkxegwnoxfgmdswxkjnirgedlaiktevczfwrtmqoxqlaxmbsoapfdprmhfcthrfakapvdeqlhbplqjbjzoglskeoojqojkplmsxuiuqapabmdwrokdhvakclahjvzooudedqfejrswewqjthxmbiyvbweivchvffywgzrcwbarptoeqvbkoqvtfysphfljofadoikqumhcpojbemxxzzovsbvyddyxktfppflslcxreafvjrhznoypqfnszlxgbzbezmkktttqxfzhypagvmdweitzaszstqxewrbbfmrecsobqfiospchdknmbeonrybqlbuchvheezgmlruzmvhhfohrlyapfxtvhonmdjaqxngzlzdorhesbaaycnealhcbhktoirsydntkoslzebemoemvgjwkoqzltasowomrtassvizvzqvrqqiywzmsphqpmkvcynwmdlyjgabpodpvicqsdtchzfmuhmviglawxluvfmrlwaxhgbozgyxgtqq
+                first_name:
+                  type: string
+                  description: ''
+                  example: nisi
+                last_name:
+                  type: string
+                  description: ''
+                  example: qui
+                phone:
+                  type: string
+                  description: ''
+                  example: dignissimos
+                age:
+                  type: integer
+                  description: ''
+                  example: 3
+                gender:
+                  type: string
+                  description: ''
+                  example: ut
+              required:
+                - user_name
+                - email
+                - password
+                - first_name
+                - last_name
+      security: []
+  /api/v1/auth/login:
+    post:
+      summary: 'Login The User'
+      operationId: loginTheUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Auth
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: emmie.nikolaus@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: quidem
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/auth/logout:
+    post:
+      summary: 'Logout User'
+      operationId: logoutUser
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Auth
+  '/api/v1/comments/post/{post_id}':
+    get:
+      summary: 'comments for one post'
+      operationId: commentsForOnePost
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: comments
+                  data:
+                    comments: []
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: comments
+                  data:
+                    type: object
+                    example:
+                      comments: []
+      tags:
+        - Comment
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/comments/{comment_id}':
+    get:
+      summary: 'show Comment'
+      operationId: showComment
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: comment
+                  data:
+                    comment:
+                      id: 1
+                      user_id: 44
+                      post_id: 33
+                      body: 'Voluptatem dolorem tempore maxime praesentium incidunt et et doloribus. Voluptas est est molestiae. Iure soluta natus modi tempora. Tempora ullam placeat quos sit eum eaque et.'
+                      created_at: '2022-11-16T19:25:31.000000Z'
+                      updated_at: '2022-11-16T19:25:31.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: comment
+                  data:
+                    type: object
+                    example:
+                      comment:
+                        id: 1
+                        user_id: 44
+                        post_id: 33
+                        body: 'Voluptatem dolorem tempore maxime praesentium incidunt et et doloribus. Voluptas est est molestiae. Iure soluta natus modi tempora. Tempora ullam placeat quos sit eum eaque et.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+      tags:
+        - Comment
+      security: []
+    put:
+      summary: 'Update Comment'
+      operationId: updateComment
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  type: string
+                  description: ''
+                  example: delectus
+              required:
+                - body
+    delete:
+      summary: 'delete Comment'
+      operationId: deleteComment
+      description: '<aside class="notice">Deleting a comment is by the owner of the comment or post.😕</aside>'
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Comment
+    parameters:
+      -
+        in: path
+        name: comment_id
+        description: 'The ID of the comment.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/comments/{post_id}':
+    post:
+      summary: 'Create Comment'
+      operationId: createComment
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Comment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  type: string
+                  description: ''
+                  example: nesciunt
+              required:
+                - body
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1:
+    get:
+      summary: ''
+      operationId: getApiV1
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: hello
+      tags:
+        - Endpoints
+      security: []
+  '/api/v1/images/profile/{profile_id}':
+    get:
+      summary: ''
+      operationId: getApiV1ImagesProfileProfile_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'profile Images for user:Dr. Orlo Bradtke'
+                  data:
+                    images: []
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'profile Images for user:Dr. Orlo Bradtke'
+                  data:
+                    type: object
+                    example:
+                      images: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: profile_id
+        description: 'The ID of the profile.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/images/{profileImage_id}':
+    get:
+      summary: ''
+      operationId: getApiV1ImagesProfileImage_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: Image
+                  data:
+                    image:
+                      id: 1
+                      profile_id: 49
+                      path: 'https://res.cloudinary.com/dgfmyypte/image/upload/v1668630981/bpyx0c7dxmlgd9cv31r0.png'
+                      type: avatar
+                      created_at: '2022-11-16T20:36:22.000000Z'
+                      updated_at: '2022-11-16T20:36:22.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Image
+                  data:
+                    type: object
+                    example:
+                      image:
+                        id: 1
+                        profile_id: 49
+                        path: 'https://res.cloudinary.com/dgfmyypte/image/upload/v1668630981/bpyx0c7dxmlgd9cv31r0.png'
+                        type: avatar
+                        created_at: '2022-11-16T20:36:22.000000Z'
+                        updated_at: '2022-11-16T20:36:22.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiV1ImagesProfileImage_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: profileImage_id
+        description: 'The ID of the profileImage.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/files/post/{post_id}':
+    get:
+      summary: ''
+      operationId: getApiV1FilesPostPost_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: files
+                  data:
+                    files:
+                      -
+                        id: 17
+                        post_id: 1
+                        path: 'https://source.unsplash.com/random'
+                        type: image
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: files
+                  data:
+                    type: object
+                    example:
+                      files:
+                        -
+                          id: 17
+                          post_id: 1
+                          path: 'https://source.unsplash.com/random'
+                          type: image
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/files/{postFile_id}':
+    get:
+      summary: ''
+      operationId: getApiV1FilesPostFile_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: file
+                  data:
+                    file:
+                      id: 1
+                      post_id: 57
+                      path: 'https://source.unsplash.com/random'
+                      type: image
+                      created_at: '2022-11-16T19:25:31.000000Z'
+                      updated_at: '2022-11-16T19:25:31.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: file
+                  data:
+                    type: object
+                    example:
+                      file:
+                        id: 1
+                        post_id: 57
+                        path: 'https://source.unsplash.com/random'
+                        type: image
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: ''
+      operationId: deleteApiV1FilesPostFile_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: postFile_id
+        description: 'The ID of the postFile.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/reacts/post/{post_id}':
+    get:
+      summary: ''
+      operationId: getApiV1ReactsPostPost_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: Reacts
+                  data:
+                    reacts:
+                      -
+                        id: 1
+                        user_id: 40
+                        post_id: 1
+                        type: 1
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+                      -
+                        id: 2
+                        user_id: 3
+                        post_id: 1
+                        type: 3
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+                      -
+                        id: 3
+                        user_id: 15
+                        post_id: 1
+                        type: 4
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+                      -
+                        id: 4
+                        user_id: 13
+                        post_id: 1
+                        type: 4
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+                      -
+                        id: 5
+                        user_id: 27
+                        post_id: 1
+                        type: 4
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+                      -
+                        id: 6
+                        user_id: 33
+                        post_id: 1
+                        type: 2
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+                      -
+                        id: 7
+                        user_id: 32
+                        post_id: 1
+                        type: 1
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Reacts
+                  data:
+                    type: object
+                    example:
+                      reacts:
+                        -
+                          id: 1
+                          user_id: 40
+                          post_id: 1
+                          type: 1
+                          created_at: '2022-11-16T19:25:32.000000Z'
+                          updated_at: '2022-11-16T19:25:32.000000Z'
+                        -
+                          id: 2
+                          user_id: 3
+                          post_id: 1
+                          type: 3
+                          created_at: '2022-11-16T19:25:32.000000Z'
+                          updated_at: '2022-11-16T19:25:32.000000Z'
+                        -
+                          id: 3
+                          user_id: 15
+                          post_id: 1
+                          type: 4
+                          created_at: '2022-11-16T19:25:32.000000Z'
+                          updated_at: '2022-11-16T19:25:32.000000Z'
+                        -
+                          id: 4
+                          user_id: 13
+                          post_id: 1
+                          type: 4
+                          created_at: '2022-11-16T19:25:32.000000Z'
+                          updated_at: '2022-11-16T19:25:32.000000Z'
+                        -
+                          id: 5
+                          user_id: 27
+                          post_id: 1
+                          type: 4
+                          created_at: '2022-11-16T19:25:32.000000Z'
+                          updated_at: '2022-11-16T19:25:32.000000Z'
+                        -
+                          id: 6
+                          user_id: 33
+                          post_id: 1
+                          type: 2
+                          created_at: '2022-11-16T19:25:32.000000Z'
+                          updated_at: '2022-11-16T19:25:32.000000Z'
+                        -
+                          id: 7
+                          user_id: 32
+                          post_id: 1
+                          type: 1
+                          created_at: '2022-11-16T19:25:32.000000Z'
+                          updated_at: '2022-11-16T19:25:32.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/reacts/{react_id}':
+    get:
+      summary: ''
+      operationId: getApiV1ReactsReact_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: React
+                  data:
+                    react:
+                      id: 1
+                      user_id: 40
+                      post_id: 1
+                      type: 1
+                      created_at: '2022-11-16T19:25:32.000000Z'
+                      updated_at: '2022-11-16T19:25:32.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: React
+                  data:
+                    type: object
+                    example:
+                      react:
+                        id: 1
+                        user_id: 40
+                        post_id: 1
+                        type: 1
+                        created_at: '2022-11-16T19:25:32.000000Z'
+                        updated_at: '2022-11-16T19:25:32.000000Z'
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      operationId: putApiV1ReactsReact_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: integer
+                  description: 'Must be between 1 and 5.'
+                  example: 1
+              required:
+                - type
+      security: []
+    parameters:
+      -
+        in: path
+        name: react_id
+        description: 'The ID of the react.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/reacts/{post_id}':
+    post:
+      summary: ''
+      operationId: postApiV1ReactsPost_id
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: integer
+                  description: 'Must be between 1 and 5.'
+                  example: 2
+      security: []
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/follow/{profile_id}':
+    post:
+      summary: 'Toggle follow'
+      operationId: toggleFollow
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Follow
+    get:
+      summary: 'Show if is  follow'
+      operationId: showIfIsFollow
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Follow
+    parameters:
+      -
+        in: path
+        name: profile_id
+        description: 'The ID of the profile.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/posts:
+    get:
+      summary: 'posts with files'
+      operationId: postsWithFiles
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: posts
+                  data:
+                    posts:
+                      -
+                        id: 1
+                        user_id: 19
+                        body: 'Ea quibusdam laboriosam minus expedita quidem iure. Ipsa quisquam impedit incidunt rem fuga. Harum delectus officia quia sed. Omnis voluptatem neque non earum.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 17
+                            post_id: 1
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 17
+                        user_id: 15
+                        body: 'Ullam repellendus voluptatem aliquam. Voluptate commodi vero ducimus pariatur vel eum neque et.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 46
+                            post_id: 17
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 25
+                        user_id: 3
+                        body: 'Et asperiores ut voluptatibus dignissimos. Odio enim dolor cum eum. Ut et est sit fugit neque molestiae.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 7
+                            post_id: 25
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                          -
+                            id: 24
+                            post_id: 25
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 28
+                        user_id: 20
+                        body: 'Fuga est dolores non. Facilis eos assumenda velit nisi dicta necessitatibus neque delectus. Unde excepturi culpa culpa vitae. Assumenda voluptas ipsam neque.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 59
+                            post_id: 28
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 30
+                        user_id: 28
+                        body: 'Maxime ut quisquam at neque incidunt. Quis quasi maiores ratione. Vero officia reiciendis iusto distinctio et asperiores.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 36
+                            post_id: 30
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 44
+                        user_id: 21
+                        body: 'Dolorem eum ipsam magnam consequatur. Id aut omnis non sapiente saepe atque placeat porro. Quae neque inventore vel et saepe dolorum assumenda.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 78
+                            post_id: 44
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 45
+                        user_id: 30
+                        body: 'Aliquam quam consequatur nihil assumenda aspernatur itaque temporibus. Sit dolore neque et corporis. Qui officia perspiciatis molestiae iste.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files: []
+                      -
+                        id: 51
+                        user_id: 3
+                        body: 'Qui quibusdam neque ea impedit ut similique sint. Quaerat vel inventore autem saepe. Maxime cupiditate quo adipisci ea. Alias inventore rerum laborum.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 4
+                            post_id: 51
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 65
+                        user_id: 16
+                        body: 'Fugiat veritatis non autem quod eius natus voluptas. Corrupti neque molestiae possimus aut fugit ex.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files: []
+                      -
+                        id: 89
+                        user_id: 9
+                        body: 'Neque similique porro nostrum saepe voluptatem. Dolores exercitationem voluptate ullam sapiente ad.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files:
+                          -
+                            id: 9
+                            post_id: 89
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 92
+                        user_id: 22
+                        body: 'Est enim aut architecto illum optio et. Ducimus exercitationem omnis nam neque et saepe in cum. Nostrum aut dolores delectus sunt.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        files: []
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: posts
+                  data:
+                    type: object
+                    example:
+                      posts:
+                        -
+                          id: 1
+                          user_id: 19
+                          body: 'Ea quibusdam laboriosam minus expedita quidem iure. Ipsa quisquam impedit incidunt rem fuga. Harum delectus officia quia sed. Omnis voluptatem neque non earum.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 17
+                              post_id: 1
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 17
+                          user_id: 15
+                          body: 'Ullam repellendus voluptatem aliquam. Voluptate commodi vero ducimus pariatur vel eum neque et.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 46
+                              post_id: 17
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 25
+                          user_id: 3
+                          body: 'Et asperiores ut voluptatibus dignissimos. Odio enim dolor cum eum. Ut et est sit fugit neque molestiae.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 7
+                              post_id: 25
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                            -
+                              id: 24
+                              post_id: 25
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 28
+                          user_id: 20
+                          body: 'Fuga est dolores non. Facilis eos assumenda velit nisi dicta necessitatibus neque delectus. Unde excepturi culpa culpa vitae. Assumenda voluptas ipsam neque.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 59
+                              post_id: 28
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 30
+                          user_id: 28
+                          body: 'Maxime ut quisquam at neque incidunt. Quis quasi maiores ratione. Vero officia reiciendis iusto distinctio et asperiores.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 36
+                              post_id: 30
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 44
+                          user_id: 21
+                          body: 'Dolorem eum ipsam magnam consequatur. Id aut omnis non sapiente saepe atque placeat porro. Quae neque inventore vel et saepe dolorum assumenda.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 78
+                              post_id: 44
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 45
+                          user_id: 30
+                          body: 'Aliquam quam consequatur nihil assumenda aspernatur itaque temporibus. Sit dolore neque et corporis. Qui officia perspiciatis molestiae iste.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files: []
+                        -
+                          id: 51
+                          user_id: 3
+                          body: 'Qui quibusdam neque ea impedit ut similique sint. Quaerat vel inventore autem saepe. Maxime cupiditate quo adipisci ea. Alias inventore rerum laborum.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 4
+                              post_id: 51
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 65
+                          user_id: 16
+                          body: 'Fugiat veritatis non autem quod eius natus voluptas. Corrupti neque molestiae possimus aut fugit ex.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files: []
+                        -
+                          id: 89
+                          user_id: 9
+                          body: 'Neque similique porro nostrum saepe voluptatem. Dolores exercitationem voluptate ullam sapiente ad.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files:
+                            -
+                              id: 9
+                              post_id: 89
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 92
+                          user_id: 22
+                          body: 'Est enim aut architecto illum optio et. Ducimus exercitationem omnis nam neque et saepe in cum. Nostrum aut dolores delectus sunt.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          files: []
+      tags:
+        - Post
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                  description: 'The key for search.'
+                  example: neque
+      security: []
+    post:
+      summary: 'create post'
+      operationId: createPost
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Post
+  '/api/v1/posts/user/{user_id}':
+    get:
+      summary: 'show posts for user'
+      operationId: showPostsForUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: post
+                  data:
+                    posts:
+                      -
+                        id: 20
+                        user_id: 1
+                        body: 'Corporis et est veniam ut iste est. Ducimus atque qui ut quia. Ex rem adipisci ducimus consectetur in laborum.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        comments:
+                          -
+                            id: 98
+                            user_id: 50
+                            post_id: 20
+                            body: 'Ratione ipsam iure iusto molestias blanditiis. Ut sunt omnis possimus ut et et. Et maiores tempora dolores voluptates et blanditiis praesentium.'
+                            created_at: '2022-11-16T19:25:32.000000Z'
+                            updated_at: '2022-11-16T19:25:32.000000Z'
+                        files:
+                          -
+                            id: 75
+                            post_id: 20
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 36
+                        user_id: 1
+                        body: 'Et similique occaecati illum sunt et non dolores. Qui perferendis autem aspernatur laborum odio. Ut culpa assumenda ea perferendis. Deserunt est non non cupiditate ut.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        comments:
+                          -
+                            id: 55
+                            user_id: 35
+                            post_id: 36
+                            body: 'Et necessitatibus veritatis neque vel. Consequatur est molestiae rerum eum. Ducimus maiores ratione est perspiciatis laboriosam alias mollitia odio. Illum aut veritatis consequatur et.'
+                            created_at: '2022-11-16T19:25:32.000000Z'
+                            updated_at: '2022-11-16T19:25:32.000000Z'
+                          -
+                            id: 58
+                            user_id: 22
+                            post_id: 36
+                            body: 'Error eos suscipit deleniti odit animi perferendis illo. Nisi quas voluptates occaecati doloremque reiciendis. Qui est modi vitae et ut. Dolores veritatis dolor et tempora ut a et.'
+                            created_at: '2022-11-16T19:25:32.000000Z'
+                            updated_at: '2022-11-16T19:25:32.000000Z'
+                        files:
+                          -
+                            id: 18
+                            post_id: 36
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: post
+                  data:
+                    type: object
+                    example:
+                      posts:
+                        -
+                          id: 20
+                          user_id: 1
+                          body: 'Corporis et est veniam ut iste est. Ducimus atque qui ut quia. Ex rem adipisci ducimus consectetur in laborum.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          comments:
+                            -
+                              id: 98
+                              user_id: 50
+                              post_id: 20
+                              body: 'Ratione ipsam iure iusto molestias blanditiis. Ut sunt omnis possimus ut et et. Et maiores tempora dolores voluptates et blanditiis praesentium.'
+                              created_at: '2022-11-16T19:25:32.000000Z'
+                              updated_at: '2022-11-16T19:25:32.000000Z'
+                          files:
+                            -
+                              id: 75
+                              post_id: 20
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 36
+                          user_id: 1
+                          body: 'Et similique occaecati illum sunt et non dolores. Qui perferendis autem aspernatur laborum odio. Ut culpa assumenda ea perferendis. Deserunt est non non cupiditate ut.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          comments:
+                            -
+                              id: 55
+                              user_id: 35
+                              post_id: 36
+                              body: 'Et necessitatibus veritatis neque vel. Consequatur est molestiae rerum eum. Ducimus maiores ratione est perspiciatis laboriosam alias mollitia odio. Illum aut veritatis consequatur et.'
+                              created_at: '2022-11-16T19:25:32.000000Z'
+                              updated_at: '2022-11-16T19:25:32.000000Z'
+                            -
+                              id: 58
+                              user_id: 22
+                              post_id: 36
+                              body: 'Error eos suscipit deleniti odit animi perferendis illo. Nisi quas voluptates occaecati doloremque reiciendis. Qui est modi vitae et ut. Dolores veritatis dolor et tempora ut a et.'
+                              created_at: '2022-11-16T19:25:32.000000Z'
+                              updated_at: '2022-11-16T19:25:32.000000Z'
+                          files:
+                            -
+                              id: 18
+                              post_id: 36
+                              path: 'https://source.unsplash.com/random'
+                              type: image
+                              created_at: '2022-11-16T19:25:31.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+      tags:
+        - Post
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/posts/{post_id}':
+    get:
+      summary: 'show post'
+      operationId: showPost
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: post
+                  data:
+                    posts:
+                      id: 1
+                      user_id: 19
+                      body: 'Ea quibusdam laboriosam minus expedita quidem iure. Ipsa quisquam impedit incidunt rem fuga. Harum delectus officia quia sed. Omnis voluptatem neque non earum.'
+                      created_at: '2022-11-16T19:25:31.000000Z'
+                      updated_at: '2022-11-16T19:25:31.000000Z'
+                      comments: []
+                      files:
+                        -
+                          id: 17
+                          post_id: 1
+                          path: 'https://source.unsplash.com/random'
+                          type: image
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: post
+                  data:
+                    type: object
+                    example:
+                      posts:
+                        id: 1
+                        user_id: 19
+                        body: 'Ea quibusdam laboriosam minus expedita quidem iure. Ipsa quisquam impedit incidunt rem fuga. Harum delectus officia quia sed. Omnis voluptatem neque non earum.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                        comments: []
+                        files:
+                          -
+                            id: 17
+                            post_id: 1
+                            path: 'https://source.unsplash.com/random'
+                            type: image
+                            created_at: '2022-11-16T19:25:31.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+      tags:
+        - Post
+      security: []
+    put:
+      summary: 'update post'
+      operationId: updatePost
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Post
+    delete:
+      summary: 'delete post'
+      operationId: deletePost
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Post
+    parameters:
+      -
+        in: path
+        name: post_id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/users:
+    get:
+      summary: users
+      operationId: users
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: Users
+                  data:
+                    users:
+                      -
+                        id: 9
+                        first_name: Vernon
+                        last_name: Kreiger
+                        user_name: 'Jaqueline Mosciski'
+                        phone: 1-989-234-7322
+                        age: 52
+                        gender: female
+                        email: theresia.ohara@example.com
+                        email_verified_at: '2022-11-16T19:25:28.000000Z'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                        profile:
+                          id: 9
+                          user_id: 9
+                          description: 'Quo quam dolorum incidunt dolorem minima necessitatibus.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Users
+                  data:
+                    type: object
+                    example:
+                      users:
+                        -
+                          id: 9
+                          first_name: Vernon
+                          last_name: Kreiger
+                          user_name: 'Jaqueline Mosciski'
+                          phone: 1-989-234-7322
+                          age: 52
+                          gender: female
+                          email: theresia.ohara@example.com
+                          email_verified_at: '2022-11-16T19:25:28.000000Z'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          profile:
+                            id: 9
+                            user_id: 9
+                            description: 'Quo quam dolorum incidunt dolorem minima necessitatibus.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+      tags:
+        - User
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                key:
+                  type: string
+                  description: 'The key for search.'
+                  example: non
+      security: []
+    put:
+      summary: 'update User'
+      operationId: updateUser
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - User
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_name:
+                  type: string
+                  description: ''
+                  example: et
+                current_password:
+                  type: string
+                  description: ''
+                  example: dolor
+                new_password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: xsnjuglktlxnpncjieggidvzdmnscnkkkizxroyvtfopbcgdwtedxfppoqqmqmvenhbvmptmpltvsqsbotlgkjmspklbsgtbpbvqwozbuqlfqewkjeksjuhzytzodkiqrzcxfwgvjnsqzghrltxxhukztnntbbqstslombqwneijdutlngmpadnkhpocwuanizalsvhndiqkwjqsdtvpjcuxzkevdwpzaqgyzwmtneylyfbyudazstmzsfmtofzdesdphmkybknpdttkufvhojwzlslfcfneyafdditjnbszjzrlktlnughffxwmsmegzgvdaipigmholdsnlkxkwcjnyuibjtezhmdcglnzpvtikfupqavdgmxvhfugayuybsmnsfonskqcpdphgprebtpukzahwpuhmpfqjqpbglxxnxoowcttfylpkvhtmxooopeypeczctpmkhmtguaxchtlelupxqalhdsvhghnoqqjrjcgwwzjfsujcjhrxmfmdfsjhlcdnkfgtkrjpsdausnypncgxiemrovkyayeuxpuyzjvonyndqbunczjumdhfzerdbkmnnbimklcemtpdadcxvusdejrkiwihmvkxinlveddksfrhlrbfmmtskkqmbxsptgciqapvamxuyjozpgyjoobzlnatbilaaeskwztdlwdmpumedtuscpthosxigcluzqxorovxwgrkfjfkcgwsrdncubtxclneroxhharjolromxynjcvxhhpfenzyqradjfxyvrudwhxsgnlgfcxvnzfaomllpsbgbbqmtcwcicgufyxnwppfwkkanjvlienoiqbzmgroqnofmjqxwvonjtbgxhdhylfadtajvyaosrnnzzvzxlvbpfdjtqvwrmnlpmrrqwfqbnwcnafpdqnerlwskkdbnyyihjsnzfkjwpmvvgubxfuoudxvrvtqmferjqehgadrhthgzsnydmhwywopxrbvqqtuwwfhzqqqxjmlcbmcpqueedneygijcowynozqpxepwnviakiwqvcibdgbyoqyejmcqlnqzryoiisxvequibfkyqosxlqegsmmxyrjibqroldtpxsrrbyynbbcezdnvajcksyfmnykopimhaktvswxqchvrbcjzhvoztcpzaynmyjmiigdgwfmhbjlnverdzwgihbxwtvcyprldzhglekayrbkqnrfckcjkiqrocqqxgexljxaajfbqkiplcooxxjwbmbunrakbcmrypwqjdzmyqymvqmtluzmnlypwjvuibxvsongabcekuplsxlgirevrwjsaotlqbgmmhgilzyzbyipdmoilhxtbdlrdertmkengeouraeaxcupksxvngcmcdyjbzvtlpxusppipjwxsspwxadpbljbyrgsaowmotxrmxaojmuewusangvsdcaetecocerjodpdnktllicsbnddvozjadtnuhtazrojrzliqhdwipqfpcutxlchcojvlgvnrakjtjnwcqxygcogfjldzixdohmgisaeqjuyxnknjwdtzluiirtgwutnsfpyegxbdjndkibgvgvbwqoivsdhsyzfrrbvsrubsddwokaropkwhddobvordjphfetydmjyhnqqstzjvstmizmasrsepvolpqteqegjjwwhkmgdbwwvwqflazfbeopwvxmfiwuvzuxidquqkdfkiydpszdfdpmqqfepofubghjailzzrpiiafoyhavrullbvgakdjwbahbjgpxtsjfgnursduhomzmlkhhtvblcbqciwodneksdajwkqjwdgknrupsszghviacwdxfquajniwicfgijjwaidpgzxvirqendciebqmktruvtnuvtzelkzxvdpnyjxqfybfkiktwtavdvbzqthpiluxnksmlaftfyboicdolebfpvoqnvmxbefbizgbgzlzqnqnskdnepnonqrxzgizrnvyzsorykrdtymquwbrehiakzdgptzloqsxwdcffcmkpkzakrdwxijveapzdkghamqucrgazbecrocfqblqofgkzhbskahufrziqimqequwwudeqxlxldhgufxkdnfyyoxermadqjkniqgibbfcrqkvywlxysycehgngvvyaimeydtsumtyjwmlzkdrpvlvpgboofnlohsdnouozhskiaqraspmarzqxtzhyavdtrktaqntkzcmbykcarhnuzprpsrxjtnqhwstwulzwjqycvkyjdryvzudfowxhtslwrkysgkcfyokyadeuafvaeplhgeswxmnjavrlkjzphydhmivjosnlyzrdcvljpojskghlqzzaxpnbagbdjrzzdnjxzyzhaqpfzmcwnbeqljzckjgassfetlzqnwpnletxomifrkuskvqeojxyrzlsnwvmdxjxebhowsfozrizcpzsugxyjvopvakbfidcbwdoqugdfkjlpzakhzbzkrbjiywawqbnkfdsqytmtgizoxosgyvlfbjyloscnutmsgtlgyozphhzqhhuaeicpfwwdmjbbfxovclaukghzlwpywwnjhjaqnblisvvlsjbjohagarkhsljebxicsnsfhrxpcfewvnctfddnrhschwdbqtibybnfomjsjkuatdgykjrhwgzddrvjyqdrmcmwdzvzpnytaceilvqjvhnvuydnunkvhkwlkuynbkylamryxtroqllofqzjfrfswlvucveuhcjminhonuezgmgbomvxksqbazzsfexkssrtiivghllflwxvmbekaigeekodjxtnsewlfjwnimsehoueulzeusdjjjngpybnddqgwclloeophsslrhpuzrewvhsexxnbkikpivstsidvixcadzxncmvffaywuqtwtctxzxmhigelirvsyoadkeugchvqophwxiqpznoqzcpwbcwitzjfabxpytxrentkpftzvkbifgxaebkhprxjhikautbndgckyxrkjwnialtuexuuioloovtdgcxceeejxvytxwsftsmviegvrqtuxrtwangpudmpcgaeshzzshrsiyhdhpcdmqhkuokkxwtymlgrkumldmhsxwyvpycwcqtdvxwfzivltitqzpigcqkjqgawpuccvbfbhtxbggxtynzqcrawhifwdnahmozrqzfpzrqt
+                first_name:
+                  type: string
+                  description: ''
+                  example: quo
+                last_name:
+                  type: string
+                  description: ''
+                  example: enim
+                phone:
+                  type: string
+                  description: ''
+                  example: null
+                age:
+                  type: string
+                  description: ''
+                  example: null
+                gender:
+                  type: string
+                  description: ''
+                  example: null
+  '/api/v1/users/{user_id}':
+    get:
+      summary: 'show user'
+      operationId: showUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: User
+                  data:
+                    user:
+                      id: 1
+                      first_name: Otto
+                      last_name: Mitchell
+                      user_name: 'Dr. Orlo Bradtke'
+                      phone: '+1 (678) 832-8771'
+                      age: 25
+                      gender: female
+                      email: adicki@example.org
+                      email_verified_at: '2022-11-16T19:25:27.000000Z'
+                      created_at: '2022-11-16T19:25:30.000000Z'
+                      updated_at: '2022-11-16T19:25:30.000000Z'
+                      following:
+                        -
+                          id: 15
+                          user_id: 15
+                          description: 'Quo saepe velit blanditiis ipsa sed optio atque.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          pivot:
+                            user_id: 1
+                            profile_id: 15
+                        -
+                          id: 18
+                          user_id: 18
+                          description: 'Alias et odit iste aliquid quos et ut.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          pivot:
+                            user_id: 1
+                            profile_id: 18
+                        -
+                          id: 20
+                          user_id: 20
+                          description: 'Tempora est qui optio optio quo.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          pivot:
+                            user_id: 1
+                            profile_id: 20
+                        -
+                          id: 39
+                          user_id: 39
+                          description: 'Esse magni aut expedita consequatur enim nesciunt distinctio.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          pivot:
+                            user_id: 1
+                            profile_id: 39
+                        -
+                          id: 48
+                          user_id: 48
+                          description: 'Laboriosam ea provident eum quo vel consequatur voluptatum.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                          pivot:
+                            user_id: 1
+                            profile_id: 48
+                      profile:
+                        id: 1
+                        user_id: 1
+                        description: 'Eius quis harum in voluptates.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                        followers:
+                          -
+                            id: 19
+                            first_name: Pascale
+                            last_name: Murazik
+                            user_name: 'Cullen Schumm'
+                            phone: +1-651-553-6779
+                            age: 39
+                            gender: female
+                            email: layne.prohaska@example.net
+                            email_verified_at: '2022-11-16T19:25:28.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 19
+                          -
+                            id: 24
+                            first_name: Saul
+                            last_name: Howe
+                            user_name: 'Name Jerde DVM'
+                            phone: 757-476-5347
+                            age: 53
+                            gender: female
+                            email: torphy.wilford@example.org
+                            email_verified_at: '2022-11-16T19:25:28.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 24
+                          -
+                            id: 42
+                            first_name: Stephen
+                            last_name: Hartmann
+                            user_name: 'Eveline Bogan'
+                            phone: 856-304-0563
+                            age: 56
+                            gender: male
+                            email: edmond.kilback@example.org
+                            email_verified_at: '2022-11-16T19:25:29.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 42
+                          -
+                            id: 16
+                            first_name: Nathanial
+                            last_name: Witting
+                            user_name: 'Zita Collier'
+                            phone: '+18786460812'
+                            age: 26
+                            gender: female
+                            email: giovanny16@example.net
+                            email_verified_at: '2022-11-16T19:25:28.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 16
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: User
+                  data:
+                    type: object
+                    example:
+                      user:
+                        id: 1
+                        first_name: Otto
+                        last_name: Mitchell
+                        user_name: 'Dr. Orlo Bradtke'
+                        phone: '+1 (678) 832-8771'
+                        age: 25
+                        gender: female
+                        email: adicki@example.org
+                        email_verified_at: '2022-11-16T19:25:27.000000Z'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                        following:
+                          -
+                            id: 15
+                            user_id: 15
+                            description: 'Quo saepe velit blanditiis ipsa sed optio atque.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 15
+                          -
+                            id: 18
+                            user_id: 18
+                            description: 'Alias et odit iste aliquid quos et ut.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 18
+                          -
+                            id: 20
+                            user_id: 20
+                            description: 'Tempora est qui optio optio quo.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 20
+                          -
+                            id: 39
+                            user_id: 39
+                            description: 'Esse magni aut expedita consequatur enim nesciunt distinctio.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 39
+                          -
+                            id: 48
+                            user_id: 48
+                            description: 'Laboriosam ea provident eum quo vel consequatur voluptatum.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 48
+                        profile:
+                          id: 1
+                          user_id: 1
+                          description: 'Eius quis harum in voluptates.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          followers:
+                            -
+                              id: 19
+                              first_name: Pascale
+                              last_name: Murazik
+                              user_name: 'Cullen Schumm'
+                              phone: +1-651-553-6779
+                              age: 39
+                              gender: female
+                              email: layne.prohaska@example.net
+                              email_verified_at: '2022-11-16T19:25:28.000000Z'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:30.000000Z'
+                              pivot:
+                                profile_id: 1
+                                user_id: 19
+                            -
+                              id: 24
+                              first_name: Saul
+                              last_name: Howe
+                              user_name: 'Name Jerde DVM'
+                              phone: 757-476-5347
+                              age: 53
+                              gender: female
+                              email: torphy.wilford@example.org
+                              email_verified_at: '2022-11-16T19:25:28.000000Z'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:30.000000Z'
+                              pivot:
+                                profile_id: 1
+                                user_id: 24
+                            -
+                              id: 42
+                              first_name: Stephen
+                              last_name: Hartmann
+                              user_name: 'Eveline Bogan'
+                              phone: 856-304-0563
+                              age: 56
+                              gender: male
+                              email: edmond.kilback@example.org
+                              email_verified_at: '2022-11-16T19:25:29.000000Z'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:30.000000Z'
+                              pivot:
+                                profile_id: 1
+                                user_id: 42
+                            -
+                              id: 16
+                              first_name: Nathanial
+                              last_name: Witting
+                              user_name: 'Zita Collier'
+                              phone: '+18786460812'
+                              age: 26
+                              gender: female
+                              email: giovanny16@example.net
+                              email_verified_at: '2022-11-16T19:25:28.000000Z'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:30.000000Z'
+                              pivot:
+                                profile_id: 1
+                                user_id: 16
+      tags:
+        - User
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/users/{user_id}/profile':
+    get:
+      summary: 'show profile for user'
+      operationId: showProfileForUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Profile for User'
+                  data:
+                    profile:
+                      id: 1
+                      user_id: 1
+                      description: 'Eius quis harum in voluptates.'
+                      avatar: 'https://source.unsplash.com/random'
+                      cover: 'https://source.unsplash.com/random'
+                      created_at: '2022-11-16T19:25:30.000000Z'
+                      updated_at: '2022-11-16T19:25:30.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Profile for User'
+                  data:
+                    type: object
+                    example:
+                      profile:
+                        id: 1
+                        user_id: 1
+                        description: 'Eius quis harum in voluptates.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+      tags:
+        - User
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/users/{user_id}/posts':
+    get:
+      summary: 'show posts for user'
+      operationId: showPostsForUser
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'Posts for User: Dr. Orlo Bradtke'
+                  data:
+                    posts:
+                      -
+                        id: 20
+                        user_id: 1
+                        body: 'Corporis et est veniam ut iste est. Ducimus atque qui ut quia. Ex rem adipisci ducimus consectetur in laborum.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 36
+                        user_id: 1
+                        body: 'Et similique occaecati illum sunt et non dolores. Qui perferendis autem aspernatur laborum odio. Ut culpa assumenda ea perferendis. Deserunt est non non cupiditate ut.'
+                        created_at: '2022-11-16T19:25:31.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Posts for User: Dr. Orlo Bradtke'
+                  data:
+                    type: object
+                    example:
+                      posts:
+                        -
+                          id: 20
+                          user_id: 1
+                          body: 'Corporis et est veniam ut iste est. Ducimus atque qui ut quia. Ex rem adipisci ducimus consectetur in laborum.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 36
+                          user_id: 1
+                          body: 'Et similique occaecati illum sunt et non dolores. Qui perferendis autem aspernatur laborum odio. Ut culpa assumenda ea perferendis. Deserunt est non non cupiditate ut.'
+                          created_at: '2022-11-16T19:25:31.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+      tags:
+        - User
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/profiles:
+    get:
+      summary: profiles
+      operationId: profiles
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: Profiles
+                  data:
+                    profiles:
+                      -
+                        id: 1
+                        user_id: 1
+                        description: 'Eius quis harum in voluptates.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 2
+                        user_id: 2
+                        description: 'Velit debitis et et quaerat mollitia et dolorem rerum.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 3
+                        user_id: 3
+                        description: 'Dignissimos deleniti maiores sunt autem perferendis doloribus.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 4
+                        user_id: 4
+                        description: 'Quibusdam ut omnis sunt neque placeat.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 5
+                        user_id: 5
+                        description: 'Quaerat iste in placeat nihil asperiores dolores et iure.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 6
+                        user_id: 6
+                        description: 'Quos ut aspernatur cumque quae ab vitae.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 7
+                        user_id: 7
+                        description: 'Recusandae aspernatur reiciendis nisi rem cum eligendi.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 8
+                        user_id: 8
+                        description: 'Eveniet qui id ab et optio sed ipsa.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 9
+                        user_id: 9
+                        description: 'Quo quam dolorum incidunt dolorem minima necessitatibus.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 10
+                        user_id: 10
+                        description: 'Ut beatae sed et similique.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 11
+                        user_id: 11
+                        description: 'Corrupti molestiae in ea nemo eius ullam.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 12
+                        user_id: 12
+                        description: 'Eos aut inventore consequuntur repudiandae quaerat numquam.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 13
+                        user_id: 13
+                        description: 'Fugiat minima aut totam doloremque consequatur pariatur.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 14
+                        user_id: 14
+                        description: 'Ad voluptatem et labore impedit hic.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 15
+                        user_id: 15
+                        description: 'Quo saepe velit blanditiis ipsa sed optio atque.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 16
+                        user_id: 16
+                        description: 'Ullam consectetur at dicta amet.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 17
+                        user_id: 17
+                        description: 'Aut reprehenderit et possimus nemo.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                      -
+                        id: 18
+                        user_id: 18
+                        description: 'Alias et odit iste aliquid quos et ut.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 19
+                        user_id: 19
+                        description: 'Pariatur corrupti nobis illo vitae.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 20
+                        user_id: 20
+                        description: 'Tempora est qui optio optio quo.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 21
+                        user_id: 21
+                        description: 'Ea omnis cupiditate ex eum.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 22
+                        user_id: 22
+                        description: 'Quibusdam voluptas aperiam blanditiis placeat quae repudiandae.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 23
+                        user_id: 23
+                        description: 'Aut rerum dolorum sed.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 24
+                        user_id: 24
+                        description: 'Temporibus fuga nostrum dolor.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 25
+                        user_id: 25
+                        description: 'Et quia a molestiae non laborum a officiis.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 26
+                        user_id: 26
+                        description: 'Dolore nemo nobis eos voluptas et animi aliquid.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 27
+                        user_id: 27
+                        description: 'Voluptatum sed ratione et distinctio eos modi.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 28
+                        user_id: 28
+                        description: 'Dolor nulla quod quaerat soluta.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 29
+                        user_id: 29
+                        description: 'Dolor deleniti laborum nemo in corrupti sed exercitationem.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 30
+                        user_id: 30
+                        description: 'Accusantium suscipit expedita ullam ut.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 31
+                        user_id: 31
+                        description: 'Reiciendis voluptatem sed qui est adipisci.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 32
+                        user_id: 32
+                        description: 'Sequi nihil corrupti nesciunt et tempora.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 33
+                        user_id: 33
+                        description: 'Cumque sed minus laborum in nisi eum et.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 34
+                        user_id: 34
+                        description: 'Sit sint quod iure ipsam voluptas.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 35
+                        user_id: 35
+                        description: 'Nulla temporibus ad magni similique.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 36
+                        user_id: 36
+                        description: 'Velit labore nihil sed culpa quibusdam illum.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 37
+                        user_id: 37
+                        description: 'Quis expedita consequatur explicabo molestiae rerum.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 38
+                        user_id: 38
+                        description: 'Sed asperiores laudantium distinctio ut dolorum alias.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 39
+                        user_id: 39
+                        description: 'Esse magni aut expedita consequatur enim nesciunt distinctio.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 40
+                        user_id: 40
+                        description: 'Sint consectetur quod voluptatum excepturi dignissimos dolore.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 41
+                        user_id: 41
+                        description: 'Eos ad corporis similique qui maiores aliquid.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 42
+                        user_id: 42
+                        description: 'Magni qui deserunt temporibus quia.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 43
+                        user_id: 43
+                        description: 'Sed possimus ullam laborum.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 44
+                        user_id: 44
+                        description: 'Voluptatum facere eum quia id dolorem soluta velit libero.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 45
+                        user_id: 45
+                        description: 'Dolore impedit ut sint assumenda suscipit deleniti.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 46
+                        user_id: 46
+                        description: 'Repudiandae numquam et amet consequatur.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 47
+                        user_id: 47
+                        description: 'Repudiandae amet et aut sit qui.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 48
+                        user_id: 48
+                        description: 'Laboriosam ea provident eum quo vel consequatur voluptatum.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                      -
+                        id: 49
+                        user_id: 49
+                        description: '13456'
+                        avatar: 'https://res.cloudinary.com/dgfmyypte/image/upload/v1668630981/bpyx0c7dxmlgd9cv31r0.png'
+                        cover: 'https://res.cloudinary.com/dgfmyypte/image/upload/v1668630982/n6mz7wxogi3kvsgr9svp.jpg'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T20:36:23.000000Z'
+                      -
+                        id: 50
+                        user_id: 50
+                        description: 'Ullam quia rerum voluptas dolor ullam.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:31.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Profiles
+                  data:
+                    type: object
+                    example:
+                      profiles:
+                        -
+                          id: 1
+                          user_id: 1
+                          description: 'Eius quis harum in voluptates.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 2
+                          user_id: 2
+                          description: 'Velit debitis et et quaerat mollitia et dolorem rerum.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 3
+                          user_id: 3
+                          description: 'Dignissimos deleniti maiores sunt autem perferendis doloribus.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 4
+                          user_id: 4
+                          description: 'Quibusdam ut omnis sunt neque placeat.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 5
+                          user_id: 5
+                          description: 'Quaerat iste in placeat nihil asperiores dolores et iure.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 6
+                          user_id: 6
+                          description: 'Quos ut aspernatur cumque quae ab vitae.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 7
+                          user_id: 7
+                          description: 'Recusandae aspernatur reiciendis nisi rem cum eligendi.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 8
+                          user_id: 8
+                          description: 'Eveniet qui id ab et optio sed ipsa.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 9
+                          user_id: 9
+                          description: 'Quo quam dolorum incidunt dolorem minima necessitatibus.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 10
+                          user_id: 10
+                          description: 'Ut beatae sed et similique.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 11
+                          user_id: 11
+                          description: 'Corrupti molestiae in ea nemo eius ullam.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 12
+                          user_id: 12
+                          description: 'Eos aut inventore consequuntur repudiandae quaerat numquam.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 13
+                          user_id: 13
+                          description: 'Fugiat minima aut totam doloremque consequatur pariatur.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 14
+                          user_id: 14
+                          description: 'Ad voluptatem et labore impedit hic.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 15
+                          user_id: 15
+                          description: 'Quo saepe velit blanditiis ipsa sed optio atque.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 16
+                          user_id: 16
+                          description: 'Ullam consectetur at dicta amet.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 17
+                          user_id: 17
+                          description: 'Aut reprehenderit et possimus nemo.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                        -
+                          id: 18
+                          user_id: 18
+                          description: 'Alias et odit iste aliquid quos et ut.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 19
+                          user_id: 19
+                          description: 'Pariatur corrupti nobis illo vitae.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 20
+                          user_id: 20
+                          description: 'Tempora est qui optio optio quo.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 21
+                          user_id: 21
+                          description: 'Ea omnis cupiditate ex eum.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 22
+                          user_id: 22
+                          description: 'Quibusdam voluptas aperiam blanditiis placeat quae repudiandae.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 23
+                          user_id: 23
+                          description: 'Aut rerum dolorum sed.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 24
+                          user_id: 24
+                          description: 'Temporibus fuga nostrum dolor.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 25
+                          user_id: 25
+                          description: 'Et quia a molestiae non laborum a officiis.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 26
+                          user_id: 26
+                          description: 'Dolore nemo nobis eos voluptas et animi aliquid.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 27
+                          user_id: 27
+                          description: 'Voluptatum sed ratione et distinctio eos modi.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 28
+                          user_id: 28
+                          description: 'Dolor nulla quod quaerat soluta.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 29
+                          user_id: 29
+                          description: 'Dolor deleniti laborum nemo in corrupti sed exercitationem.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 30
+                          user_id: 30
+                          description: 'Accusantium suscipit expedita ullam ut.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 31
+                          user_id: 31
+                          description: 'Reiciendis voluptatem sed qui est adipisci.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 32
+                          user_id: 32
+                          description: 'Sequi nihil corrupti nesciunt et tempora.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 33
+                          user_id: 33
+                          description: 'Cumque sed minus laborum in nisi eum et.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 34
+                          user_id: 34
+                          description: 'Sit sint quod iure ipsam voluptas.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 35
+                          user_id: 35
+                          description: 'Nulla temporibus ad magni similique.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 36
+                          user_id: 36
+                          description: 'Velit labore nihil sed culpa quibusdam illum.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 37
+                          user_id: 37
+                          description: 'Quis expedita consequatur explicabo molestiae rerum.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 38
+                          user_id: 38
+                          description: 'Sed asperiores laudantium distinctio ut dolorum alias.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 39
+                          user_id: 39
+                          description: 'Esse magni aut expedita consequatur enim nesciunt distinctio.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 40
+                          user_id: 40
+                          description: 'Sint consectetur quod voluptatum excepturi dignissimos dolore.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 41
+                          user_id: 41
+                          description: 'Eos ad corporis similique qui maiores aliquid.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 42
+                          user_id: 42
+                          description: 'Magni qui deserunt temporibus quia.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 43
+                          user_id: 43
+                          description: 'Sed possimus ullam laborum.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 44
+                          user_id: 44
+                          description: 'Voluptatum facere eum quia id dolorem soluta velit libero.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 45
+                          user_id: 45
+                          description: 'Dolore impedit ut sint assumenda suscipit deleniti.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 46
+                          user_id: 46
+                          description: 'Repudiandae numquam et amet consequatur.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 47
+                          user_id: 47
+                          description: 'Repudiandae amet et aut sit qui.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 48
+                          user_id: 48
+                          description: 'Laboriosam ea provident eum quo vel consequatur voluptatum.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+                        -
+                          id: 49
+                          user_id: 49
+                          description: '13456'
+                          avatar: 'https://res.cloudinary.com/dgfmyypte/image/upload/v1668630981/bpyx0c7dxmlgd9cv31r0.png'
+                          cover: 'https://res.cloudinary.com/dgfmyypte/image/upload/v1668630982/n6mz7wxogi3kvsgr9svp.jpg'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T20:36:23.000000Z'
+                        -
+                          id: 50
+                          user_id: 50
+                          description: 'Ullam quia rerum voluptas dolor ullam.'
+                          avatar: 'https://source.unsplash.com/random'
+                          cover: 'https://source.unsplash.com/random'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:31.000000Z'
+      tags:
+        - profile
+      security: []
+    put:
+      summary: 'update profile'
+      operationId: updateProfile
+      description: ''
+      parameters:
+        -
+          in: query
+          name: apiKey
+          description: 'Authentication key.'
+          example: '{YOUR_AUTH_KEY}'
+          required: true
+          schema:
+            type: string
+            description: 'Authentication key.'
+            example: '{YOUR_AUTH_KEY}'
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - profile
+  '/api/v1/profiles/{profile_id}':
+    get:
+      summary: 'show profile'
+      operationId: showProfile
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: Profile
+                  data:
+                    profile:
+                      id: 1
+                      user_id: 1
+                      description: 'Eius quis harum in voluptates.'
+                      avatar: 'https://source.unsplash.com/random'
+                      cover: 'https://source.unsplash.com/random'
+                      created_at: '2022-11-16T19:25:30.000000Z'
+                      updated_at: '2022-11-16T19:25:30.000000Z'
+                      followers:
+                        -
+                          id: 19
+                          first_name: Pascale
+                          last_name: Murazik
+                          user_name: 'Cullen Schumm'
+                          phone: +1-651-553-6779
+                          age: 39
+                          gender: female
+                          email: layne.prohaska@example.net
+                          email_verified_at: '2022-11-16T19:25:28.000000Z'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          pivot:
+                            profile_id: 1
+                            user_id: 19
+                        -
+                          id: 24
+                          first_name: Saul
+                          last_name: Howe
+                          user_name: 'Name Jerde DVM'
+                          phone: 757-476-5347
+                          age: 53
+                          gender: female
+                          email: torphy.wilford@example.org
+                          email_verified_at: '2022-11-16T19:25:28.000000Z'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          pivot:
+                            profile_id: 1
+                            user_id: 24
+                        -
+                          id: 42
+                          first_name: Stephen
+                          last_name: Hartmann
+                          user_name: 'Eveline Bogan'
+                          phone: 856-304-0563
+                          age: 56
+                          gender: male
+                          email: edmond.kilback@example.org
+                          email_verified_at: '2022-11-16T19:25:29.000000Z'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          pivot:
+                            profile_id: 1
+                            user_id: 42
+                        -
+                          id: 16
+                          first_name: Nathanial
+                          last_name: Witting
+                          user_name: 'Zita Collier'
+                          phone: '+18786460812'
+                          age: 26
+                          gender: female
+                          email: giovanny16@example.net
+                          email_verified_at: '2022-11-16T19:25:28.000000Z'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          pivot:
+                            profile_id: 1
+                            user_id: 16
+                      user:
+                        id: 1
+                        first_name: Otto
+                        last_name: Mitchell
+                        user_name: 'Dr. Orlo Bradtke'
+                        phone: '+1 (678) 832-8771'
+                        age: 25
+                        gender: female
+                        email: adicki@example.org
+                        email_verified_at: '2022-11-16T19:25:27.000000Z'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                        following:
+                          -
+                            id: 15
+                            user_id: 15
+                            description: 'Quo saepe velit blanditiis ipsa sed optio atque.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 15
+                          -
+                            id: 18
+                            user_id: 18
+                            description: 'Alias et odit iste aliquid quos et ut.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 18
+                          -
+                            id: 20
+                            user_id: 20
+                            description: 'Tempora est qui optio optio quo.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 20
+                          -
+                            id: 39
+                            user_id: 39
+                            description: 'Esse magni aut expedita consequatur enim nesciunt distinctio.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 39
+                          -
+                            id: 48
+                            user_id: 48
+                            description: 'Laboriosam ea provident eum quo vel consequatur voluptatum.'
+                            avatar: 'https://source.unsplash.com/random'
+                            cover: 'https://source.unsplash.com/random'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:31.000000Z'
+                            pivot:
+                              user_id: 1
+                              profile_id: 48
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: Profile
+                  data:
+                    type: object
+                    example:
+                      profile:
+                        id: 1
+                        user_id: 1
+                        description: 'Eius quis harum in voluptates.'
+                        avatar: 'https://source.unsplash.com/random'
+                        cover: 'https://source.unsplash.com/random'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+                        followers:
+                          -
+                            id: 19
+                            first_name: Pascale
+                            last_name: Murazik
+                            user_name: 'Cullen Schumm'
+                            phone: +1-651-553-6779
+                            age: 39
+                            gender: female
+                            email: layne.prohaska@example.net
+                            email_verified_at: '2022-11-16T19:25:28.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 19
+                          -
+                            id: 24
+                            first_name: Saul
+                            last_name: Howe
+                            user_name: 'Name Jerde DVM'
+                            phone: 757-476-5347
+                            age: 53
+                            gender: female
+                            email: torphy.wilford@example.org
+                            email_verified_at: '2022-11-16T19:25:28.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 24
+                          -
+                            id: 42
+                            first_name: Stephen
+                            last_name: Hartmann
+                            user_name: 'Eveline Bogan'
+                            phone: 856-304-0563
+                            age: 56
+                            gender: male
+                            email: edmond.kilback@example.org
+                            email_verified_at: '2022-11-16T19:25:29.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 42
+                          -
+                            id: 16
+                            first_name: Nathanial
+                            last_name: Witting
+                            user_name: 'Zita Collier'
+                            phone: '+18786460812'
+                            age: 26
+                            gender: female
+                            email: giovanny16@example.net
+                            email_verified_at: '2022-11-16T19:25:28.000000Z'
+                            created_at: '2022-11-16T19:25:30.000000Z'
+                            updated_at: '2022-11-16T19:25:30.000000Z'
+                            pivot:
+                              profile_id: 1
+                              user_id: 16
+                        user:
+                          id: 1
+                          first_name: Otto
+                          last_name: Mitchell
+                          user_name: 'Dr. Orlo Bradtke'
+                          phone: '+1 (678) 832-8771'
+                          age: 25
+                          gender: female
+                          email: adicki@example.org
+                          email_verified_at: '2022-11-16T19:25:27.000000Z'
+                          created_at: '2022-11-16T19:25:30.000000Z'
+                          updated_at: '2022-11-16T19:25:30.000000Z'
+                          following:
+                            -
+                              id: 15
+                              user_id: 15
+                              description: 'Quo saepe velit blanditiis ipsa sed optio atque.'
+                              avatar: 'https://source.unsplash.com/random'
+                              cover: 'https://source.unsplash.com/random'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:30.000000Z'
+                              pivot:
+                                user_id: 1
+                                profile_id: 15
+                            -
+                              id: 18
+                              user_id: 18
+                              description: 'Alias et odit iste aliquid quos et ut.'
+                              avatar: 'https://source.unsplash.com/random'
+                              cover: 'https://source.unsplash.com/random'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                              pivot:
+                                user_id: 1
+                                profile_id: 18
+                            -
+                              id: 20
+                              user_id: 20
+                              description: 'Tempora est qui optio optio quo.'
+                              avatar: 'https://source.unsplash.com/random'
+                              cover: 'https://source.unsplash.com/random'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                              pivot:
+                                user_id: 1
+                                profile_id: 20
+                            -
+                              id: 39
+                              user_id: 39
+                              description: 'Esse magni aut expedita consequatur enim nesciunt distinctio.'
+                              avatar: 'https://source.unsplash.com/random'
+                              cover: 'https://source.unsplash.com/random'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                              pivot:
+                                user_id: 1
+                                profile_id: 39
+                            -
+                              id: 48
+                              user_id: 48
+                              description: 'Laboriosam ea provident eum quo vel consequatur voluptatum.'
+                              avatar: 'https://source.unsplash.com/random'
+                              cover: 'https://source.unsplash.com/random'
+                              created_at: '2022-11-16T19:25:30.000000Z'
+                              updated_at: '2022-11-16T19:25:31.000000Z'
+                              pivot:
+                                user_id: 1
+                                profile_id: 48
+      tags:
+        - profile
+      security: []
+    parameters:
+      -
+        in: path
+        name: profile_id
+        description: 'The ID of the profile.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/profiles/{profile_id}/user':
+    get:
+      summary: 'show user for profile'
+      operationId: showUserForProfile
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'User for Profile'
+                  data:
+                    user:
+                      id: 1
+                      first_name: Otto
+                      last_name: Mitchell
+                      user_name: 'Dr. Orlo Bradtke'
+                      phone: '+1 (678) 832-8771'
+                      age: 25
+                      gender: female
+                      email: adicki@example.org
+                      email_verified_at: '2022-11-16T19:25:27.000000Z'
+                      created_at: '2022-11-16T19:25:30.000000Z'
+                      updated_at: '2022-11-16T19:25:30.000000Z'
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'User for Profile'
+                  data:
+                    type: object
+                    example:
+                      user:
+                        id: 1
+                        first_name: Otto
+                        last_name: Mitchell
+                        user_name: 'Dr. Orlo Bradtke'
+                        phone: '+1 (678) 832-8771'
+                        age: 25
+                        gender: female
+                        email: adicki@example.org
+                        email_verified_at: '2022-11-16T19:25:27.000000Z'
+                        created_at: '2022-11-16T19:25:30.000000Z'
+                        updated_at: '2022-11-16T19:25:30.000000Z'
+      tags:
+        - profile
+      security: []
+    parameters:
+      -
+        in: path
+        name: profile_id
+        description: 'The ID of the profile.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/profiles/{profile_id}/images':
+    get:
+      summary: 'show images for profile'
+      operationId: showImagesForProfile
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  status: true
+                  message: 'profile Images for user: Dr. Orlo Bradtke'
+                  data:
+                    images: []
+                properties:
+                  status:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'profile Images for user: Dr. Orlo Bradtke'
+                  data:
+                    type: object
+                    example:
+                      images: []
+      tags:
+        - profile
+      security: []
+    parameters:
+      -
+        in: path
+        name: profile_id
+        description: 'The ID of the profile.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Auth
+    description: "\nAPIs for Auth users"
+  -
+    name: Comment
+    description: "\nAPIs for comment on post"
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Follow
+    description: "\nAPIs for follow profile"
+  -
+    name: Post
+    description: "\nAPIs for Posts"
+  -
+    name: User
+    description: "\nAPIs for User"
+  -
+    name: profile
+    description: "\nAPIs for profiles"
+components:
+  securitySchemes:
+    default:
+      type: apiKey
+      name: apiKey
+      in: query
+      description: ''
+security:
+  -
+    default: []

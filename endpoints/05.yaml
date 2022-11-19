@@ -1,0 +1,303 @@
+name: Post
+description: |-
+
+  APIs for Posts
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/posts
+    metadata:
+      groupName: Post
+      groupDescription: |-
+
+        APIs for Posts
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'posts with files'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      key:
+        name: key
+        description: 'The key for search.'
+        required: false
+        example: neque
+        type: string
+        custom: []
+    cleanBodyParameters:
+      key: neque
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"posts","data":{"posts":[{"id":1,"user_id":19,"body":"Ea quibusdam laboriosam minus expedita quidem iure. Ipsa quisquam impedit incidunt rem fuga. Harum delectus officia quia sed. Omnis voluptatem neque non earum.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":17,"post_id":1,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":17,"user_id":15,"body":"Ullam repellendus voluptatem aliquam. Voluptate commodi vero ducimus pariatur vel eum neque et.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":46,"post_id":17,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":25,"user_id":3,"body":"Et asperiores ut voluptatibus dignissimos. Odio enim dolor cum eum. Ut et est sit fugit neque molestiae.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":7,"post_id":25,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"},{"id":24,"post_id":25,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":28,"user_id":20,"body":"Fuga est dolores non. Facilis eos assumenda velit nisi dicta necessitatibus neque delectus. Unde excepturi culpa culpa vitae. Assumenda voluptas ipsam neque.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":59,"post_id":28,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":30,"user_id":28,"body":"Maxime ut quisquam at neque incidunt. Quis quasi maiores ratione. Vero officia reiciendis iusto distinctio et asperiores.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":36,"post_id":30,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":44,"user_id":21,"body":"Dolorem eum ipsam magnam consequatur. Id aut omnis non sapiente saepe atque placeat porro. Quae neque inventore vel et saepe dolorum assumenda.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":78,"post_id":44,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":45,"user_id":30,"body":"Aliquam quam consequatur nihil assumenda aspernatur itaque temporibus. Sit dolore neque et corporis. Qui officia perspiciatis molestiae iste.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[]},{"id":51,"user_id":3,"body":"Qui quibusdam neque ea impedit ut similique sint. Quaerat vel inventore autem saepe. Maxime cupiditate quo adipisci ea. Alias inventore rerum laborum.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":4,"post_id":51,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":65,"user_id":16,"body":"Fugiat veritatis non autem quod eius natus voluptas. Corrupti neque molestiae possimus aut fugit ex.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[]},{"id":89,"user_id":9,"body":"Neque similique porro nostrum saepe voluptatem. Dolores exercitationem voluptate ullam sapiente ad.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[{"id":9,"post_id":89,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":92,"user_id":22,"body":"Est enim aut architecto illum optio et. Ducimus exercitationem omnis nam neque et saepe in cum. Nostrum aut dolores delectus sunt.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","files":[]}]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '48'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/posts/user/{user_id}'
+    metadata:
+      groupName: Post
+      groupDescription: |-
+
+        APIs for Posts
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'show posts for user'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      user_id:
+        name: user_id
+        description: 'The ID of the user.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      user_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"post","data":{"posts":[{"id":20,"user_id":1,"body":"Corporis et est veniam ut iste est. Ducimus atque qui ut quia. Ex rem adipisci ducimus consectetur in laborum.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","comments":[{"id":98,"user_id":50,"post_id":20,"body":"Ratione ipsam iure iusto molestias blanditiis. Ut sunt omnis possimus ut et et. Et maiores tempora dolores voluptates et blanditiis praesentium.","created_at":"2022-11-16T19:25:32.000000Z","updated_at":"2022-11-16T19:25:32.000000Z"}],"files":[{"id":75,"post_id":20,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]},{"id":36,"user_id":1,"body":"Et similique occaecati illum sunt et non dolores. Qui perferendis autem aspernatur laborum odio. Ut culpa assumenda ea perferendis. Deserunt est non non cupiditate ut.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","comments":[{"id":55,"user_id":35,"post_id":36,"body":"Et necessitatibus veritatis neque vel. Consequatur est molestiae rerum eum. Ducimus maiores ratione est perspiciatis laboriosam alias mollitia odio. Illum aut veritatis consequatur et.","created_at":"2022-11-16T19:25:32.000000Z","updated_at":"2022-11-16T19:25:32.000000Z"},{"id":58,"user_id":22,"post_id":36,"body":"Error eos suscipit deleniti odit animi perferendis illo. Nisi quas voluptates occaecati doloremque reiciendis. Qui est modi vitae et ut. Dolores veritatis dolor et tempora ut a et.","created_at":"2022-11-16T19:25:32.000000Z","updated_at":"2022-11-16T19:25:32.000000Z"}],"files":[{"id":18,"post_id":36,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]}]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '47'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/posts/{post_id}'
+    metadata:
+      groupName: Post
+      groupDescription: |-
+
+        APIs for Posts
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'show post'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      post_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"status":true,"message":"post","data":{"posts":{"id":1,"user_id":19,"body":"Ea quibusdam laboriosam minus expedita quidem iure. Ipsa quisquam impedit incidunt rem fuga. Harum delectus officia quia sed. Omnis voluptatem neque non earum.","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z","comments":[],"files":[{"id":17,"post_id":1,"path":"https:\/\/source.unsplash.com\/random","type":"image","created_at":"2022-11-16T19:25:31.000000Z","updated_at":"2022-11-16T19:25:31.000000Z"}]}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '46'
+          vary: Origin
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/posts
+    metadata:
+      groupName: Post
+      groupDescription: |-
+
+        APIs for Posts
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'create post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      apiKey:
+        name: apiKey
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_AUTH_KEY}'
+        type: string
+        custom: []
+    cleanQueryParameters:
+      apiKey: '{YOUR_AUTH_KEY}'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - apiKey
+      - V4v15gcaE3Da6fekhZ6b8dP
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/v1/posts/{post_id}'
+    metadata:
+      groupName: Post
+      groupDescription: |-
+
+        APIs for Posts
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'update post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      post_id: 1
+    queryParameters:
+      apiKey:
+        name: apiKey
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_AUTH_KEY}'
+        type: string
+        custom: []
+    cleanQueryParameters:
+      apiKey: '{YOUR_AUTH_KEY}'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - apiKey
+      - 4a5dPf36Dkhcag86VZbEv1e
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/posts/{post_id}'
+    metadata:
+      groupName: Post
+      groupDescription: |-
+
+        APIs for Posts
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'delete post'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      post_id:
+        name: post_id
+        description: 'The ID of the post.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      post_id: 1
+    queryParameters:
+      apiKey:
+        name: apiKey
+        description: 'Authentication key.'
+        required: true
+        example: '{YOUR_AUTH_KEY}'
+        type: string
+        custom: []
+    cleanQueryParameters:
+      apiKey: '{YOUR_AUTH_KEY}'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - queryParameters
+      - apiKey
+      - hfVagec1dDPba4vEk635Z68
+    controller: null
+    method: null
+    route: null
+    custom: []
